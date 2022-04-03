@@ -27,7 +27,7 @@ docker run \
     --env="DISPLAY=$DISPLAY" \
     --privileged \
     -v steam:/steam \
-    mjsvcg
+    veckia9x/mjsvcg
 ```
 For `let it run until it brake itself` status I recomend just `run -dit` and `--restart=unless-stopped` so you can close the ssh/local session and/or restart your PC/server and the container start itself again.
 
@@ -44,7 +44,7 @@ docker run \
     --privileged \
     --restart=unless-stopped \
     -v steam:/steam \
-    mjsvcg
+    veckia9x/mjsvcg
 ```
 
 You can then browse to http://[SERVERIP]:15800/, log in as yourself, set up remote play, you can use [pretty much any common pc/smartphone/smart device to remoteplay](https://store.steampowered.com/remoteplay), install a game and try it out.
