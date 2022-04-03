@@ -42,7 +42,9 @@ RUN set -x && \
       file \
       pulseaudio \
       pciutils \
-      zenity && \
+      zenity \
+      libgl1-mesa-glx \
+      libgl1-mesa-dri && \
     mkdir -p /src && \
     cd /src && \
     wget http://repo.steampowered.com/steam/archive/precise/steam_latest.tar.gz && \

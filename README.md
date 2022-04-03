@@ -13,6 +13,24 @@ So far, I've been testing this on my humble homelab machine.
 (HP Prodesk 600 G1 DM - i3-4150T - 4GB DDR3L - 240GB SATA SSD).
 This build is geared towards Intel iGPU, for now at least.
 
+
+For debug I recomend just `run -it` so you can actually see any error codes.
+```
+docker run \
+    --rm \
+    -it \
+    --name steamcg \
+    --shm-size 256M \
+    -p 15800:5800 \
+    --volume=/tmp/.X11-unix:/tmp/.X11-unix \
+    --device=/dev/dri:/dev/dri \
+    --env="DISPLAY=$DISPLAY" \
+    --privileged \
+    -v steam:/steam \
+    mjsvcg
+```
+For `let it run until it brake itself` status I recomend just `run -dit` and `--restart=unless-stopped` so you can close the ssh/local session and/or restart your PC/server and the container start itself again.
+
 ```
 docker run \
     --rm \
@@ -24,11 +42,12 @@ docker run \
     --device=/dev/dri:/dev/dri \
     --env="DISPLAY=$DISPLAY" \
     --privileged \
+    --restart=unless-stopped \
     -v steam:/steam \
-    steamcg
+    mjsvcg
 ```
 
-You can then browse to http://[SERVERIP]:15800/, log in as yourself, install a game and try it out.
+You can then browse to http://[SERVERIP]:15800/, log in as yourself, set up remote play, you can use another pc, a raspberry pi connected to a TV or your phone, install a game and try it out.
 
 You may need to run `modprobe uinput` on the docker host prior... See how you go.
 
