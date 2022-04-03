@@ -9,9 +9,9 @@ And is a fork of the original work done by [mikenye/docker-steam](https://github
 
 ## Running
 
-So far, I've been testing this on my humble homelab machine.
-(HP Prodesk 600 G1 DM - i3-4150T - 4GB DDR3L - 240GB SATA SSD).
-This build is geared towards Intel iGPU, for now at least.
+So far, I've been testing this on my humble homelab machine.  
+(HP Prodesk 600 G1 DM - i3-4150T - 4GB DDR3L - 240GB SATA SSD).  
+This build is geared towards Intel iGPU, for now at least.  
 
 
 For debug I recomend just `run -it` so you can actually see any error codes.
@@ -47,9 +47,9 @@ docker run \
     veckia9x/mjsvcg
 ```
 
-You can then browse to http://[SERVERIP]:15800/, log in as yourself, set up remote play, you can use [pretty much any common pc/smartphone/smart device to remoteplay](https://store.steampowered.com/remoteplay), install a game and try it out.
-
-You may need to run `modprobe uinput` on the docker host prior... See how you go.
+You can then browse to http://[SERVERIP]:15800/, log in as yourself, set up remote play, you can use [pretty much any common pc/smartphone/smart device to remoteplay](https://store.steampowered.com/remoteplay), install a game and try it out.  
+  
+You may need to run `modprobe uinput` on the docker host prior... See how you go.  
 
 ## Current Status
 
@@ -77,7 +77,7 @@ You may need to run `modprobe uinput` on the docker host prior... See how you go
 
 ### Comments
 
--> Working on gpu drivers (intel -> nvidia -> AMD)
+-> Working on gpu drivers (intel -> nvidia -> AMD)  
 
 "I don't think I'm good enough to get this running perfectly on my own. :-)"
 mikenye, trust yourself! <3
