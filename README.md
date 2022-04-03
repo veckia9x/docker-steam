@@ -47,7 +47,7 @@ docker run \
     mjsvcg
 ```
 
-You can then browse to http://[SERVERIP]:15800/, log in as yourself, set up remote play, you can use another pc, a raspberry pi connected to a TV or your phone, install a game and try it out.
+You can then browse to http://[SERVERIP]:15800/, log in as yourself, set up remote play, you can use [pretty much any common pc/smartphone/smart device to remoteplay](https://store.steampowered.com/remoteplay), install a game and try it out.
 
 You may need to run `modprobe uinput` on the docker host prior... See how you go.
 
