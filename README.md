@@ -1,4 +1,4 @@
-# Docker Container for Steam - Cloud Gaming Selfhosted
+# Docker Container for Steam - Selfhosted Cloud Gaming
 ### This is a work in progress.
 
 It implements Steam running on Linux, inside a Docker Container.
