@@ -8,12 +8,11 @@ And is a fork of the original work done by [mikenye/docker-steam](https://github
   
 ## PROJECT STATUS
 ### This is a work in progress.
-* Steam launches, and I can log in and install games.  
-
-* Some games runs (native linux).  
-* No audio  
-* No support for gamepads  
-* No HW acceleration (low fps, high CPU usage).  
+* Steam launches, and I can log in and install games.
+* Some games runs (native linux).
+* No audio.
+* No support for gamepads.
+* No HW acceleration (low fps, high CPU usage).
 
 ## TO DO LIST:  
 -> Working on gpu drivers (intel -> nvidia -> AMD)  
