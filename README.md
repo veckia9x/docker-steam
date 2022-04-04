@@ -2,12 +2,14 @@
   
 ## PROJECT STATUS
 ### This is a work in progress.
-* Some games runs.  
+* Steam launches, and I can log in and install games.  
+
+* Some games runs (native linux).  
 * No audio  
 * No support for gamepads  
 * No HW acceleration (low fps, high CPU usage).  
 
-It implements Steam running on Linux, inside a Docker Container.
+It implements Steam running on Linux, inside a Docker Container.  
 The objective is to play games (native Linux and Proton) via Steam Remote Play.
 
 This container builds upon the excellent work done in the [jlesage/baseimage-gui](https://hub.docker.com/r/jlesage/baseimage-gui) container.  
@@ -40,9 +42,10 @@ docker run \
     --name steamcg \
     --shm-size 256M \
     -p 15800:5800 \
-    --volume=/tmp/.X11-unix:/tmp/.X11-unix \
-    --device=/dev/dri:/dev/dri \
-    --env="DISPLAY=$DISPLAY" \
+    --volume /tmp/.X11-unix:/tmp/.X11-unix \
+    --device /dev/dri:/dev/dri \
+    --device /dev/dri/card0:/dev/dri/card0 \
+    --device /dev/dri/renderD128:/dev/dri/renderD128 \
     --privileged \
     -v steam:/steam \
     veckia9x/mjsvcg
@@ -56,9 +59,10 @@ docker run \
     --name steamcg \
     --shm-size 256M \
     -p 15800:5800 \
-    --volume=/tmp/.X11-unix:/tmp/.X11-unix \
-    --device=/dev/dri:/dev/dri \
-    --env="DISPLAY=$DISPLAY" \
+    --volume /tmp/.X11-unix:/tmp/.X11-unix \
+    --device /dev/dri:/dev/dri \
+    --device /dev/dri/card0:/dev/dri/card0 \
+    --device /dev/dri/renderD128:/dev/dri/renderD128 \
     --privileged \
     --restart=unless-stopped \
     -v steam:/steam \
@@ -69,33 +73,20 @@ You can then browse to http://[SERVERIP]:15800/, log in as yourself, set up remo
   
 You may need to run `modprobe uinput` on the docker host prior... See how you go.  
 
-## Current Status
-
-* Steam launches, and I can log in and install games.
-* I have had success launching two native Linux titles:
-  * PixelJunk Monsters Ultimate
-  * PixelJunk Shooter
-* I have had moderate success with Undertale (native Linux)
-* I have had no success with Proton games, I think this is due to the fact that I'm not passing through a GPU to the container... I will test this further as time permits.
-
-* For Remote Play:
-  * Keyboard/Mouse input seems to work fine
-  * Gamepad input seems hit and miss
-  * Sound doesn't appear to be working (it has worked in the past...)
 
 ## Know Issues
 
 - On subsequent runs, a segmentation fault occurs. Deleting the `steam` volume and having Steam re-install seems to fix it up. It's annoying but I haven't figured out a fix yet.
 
 
-## Games running.
+## Games tested.
 
 * [PixelJunk Monsters via NoVNC](https://i.imgur.com/7FVqXm5.mp4)
-* Limbo (LOW FPS, 4~5fps)
-* SpeedRunners (playable)
-* Poly Bridge (playable)
+* Limbo [noVNC] (LOW FPS, 4~5fps)
+* SpeedRunners [noVNC] (playable)
+* Poly Bridge [noVNC] (playable)
 
 ### Comments
 
-"I don't think I'm good enough to get this running perfectly on my own. :-)"
+"I don't think I'm good enough to get this running perfectly on my own. :-)"  
 mikenye, trust yourself! <3
