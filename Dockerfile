@@ -57,6 +57,12 @@ RUN set -x && \
       make && \
     apt-get autoremove -y && \
     rm -rf /tmp/* && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    cd /steam/xdg/data/Steam/ubuntu12_32/steam-runtime/i386/lib/i386-linux-gnu/ && \
+    mv libgpg-error.so.0 libgpg-error.so.0.bak && \
+    mv libgpg-error.so.0.8.0 libgpg-error.so.0.8.0.bak && \
+    cd /steam/xdg/data/Steam/ubuntu12_32/steam-runtime/amd64/lib/x86_64-linux-gnu/ && \
+    mv libgpg-error.so.0 libgpg-error.so.0.bak && && \
+    mv libgpg-error.so.0.8.0 libgpg-error.so.0.8.0.bak
 
 COPY rootfs/ /

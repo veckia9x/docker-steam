@@ -1,11 +1,25 @@
 # Docker Container for Steam - Selfhosted Cloud Gaming
+  
 ### This is a work in progress.
+### This is a work in progress.
+### This is a work in progress.
+### This is a work in progress.
+### This is a work in progress.
+### This is a work in progress.
+
 
 It implements Steam running on Linux, inside a Docker Container.
 The objective is to play games (native Linux and Proton) via Steam Remote Play.
 
 This container builds upon the excellent work done in the [jlesage/baseimage-gui](https://hub.docker.com/r/jlesage/baseimage-gui) container.  
 And is a fork of the original work done by [mikenye/docker-steam](https://github.com/mikenye/docker-steam)
+
+
+## TO DO LIST:  
+-> Working on gpu drivers (intel -> nvidia -> AMD)  
+-> Make VAAPI work!
+-> Make touch controls/gamepads work!
+
 
 ## Running
 
@@ -76,8 +90,6 @@ You may need to run `modprobe uinput` on the docker host prior... See how you go
 
 
 ### Comments
-
--> Working on gpu drivers (intel -> nvidia -> AMD)  
 
 "I don't think I'm good enough to get this running perfectly on my own. :-)"
 mikenye, trust yourself! <3
