@@ -1,12 +1,11 @@
 # Docker Container for Steam - Selfhosted Cloud Gaming
   
+## PROJECT STATUS
 ### This is a work in progress.
-### This is a work in progress.
-### This is a work in progress.
-### This is a work in progress.
-### This is a work in progress.
-### This is a work in progress.
-
+* Some games runs.  
+* No audio  
+* No support for gamepads  
+* No HW acceleration (low fps, high CPU usage).  
 
 It implements Steam running on Linux, inside a Docker Container.
 The objective is to play games (native Linux and Proton) via Steam Remote Play.
@@ -17,9 +16,14 @@ And is a fork of the original work done by [mikenye/docker-steam](https://github
 
 ## TO DO LIST:  
 -> Working on gpu drivers (intel -> nvidia -> AMD)  
--> Make VAAPI work!
--> Make touch controls/gamepads work!
-
+-> Make VAAPI work!  
+-> Make touch controls/gamepads work!  
+-> Get audio working  
+-> Get Vulkan working  
+-> Build script to disable novnc and save resources.  
+-> Maybe: Disable novnc entirely (security, nginx, etc...), replace with proper vnc (wich will be disabled after setting steam acc).  
+-> Set max resolution to 720p.  
+-> Set max upload speed to 10Mbit/s.  
 
 ## Running
 
@@ -84,10 +88,11 @@ You may need to run `modprobe uinput` on the docker host prior... See how you go
 - On subsequent runs, a segmentation fault occurs. Deleting the `steam` volume and having Steam re-install seems to fix it up. It's annoying but I haven't figured out a fix yet.
 
 
-## Screenshots
+## Games running.
 
 * [PixelJunk Monsters via NoVNC](https://i.imgur.com/7FVqXm5.mp4)
-
+* Limbo (LOW FPS, 4~5fps)
+* SpeedRunners (playable)
 
 ### Comments
 
