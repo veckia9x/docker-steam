@@ -93,6 +93,7 @@ You may need to run `modprobe uinput` on the docker host prior... See how you go
 * [PixelJunk Monsters via NoVNC](https://i.imgur.com/7FVqXm5.mp4)
 * Limbo (LOW FPS, 4~5fps)
 * SpeedRunners (playable)
+* Poly Bridge (playable)
 
 ### Comments
 
