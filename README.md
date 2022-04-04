@@ -14,7 +14,7 @@ And is a fork of the original work done by [mikenye/docker-steam](https://github
 * No support for gamepads.
 * No HW acceleration (low fps, high CPU usage).
 
-## TO DO LIST:  
+### TO DO LIST:  
 -> Working on gpu drivers (intel -> nvidia -> AMD)  
 -> Make VAAPI work!  
 -> Make touch controls/gamepads work!  
@@ -25,7 +25,7 @@ And is a fork of the original work done by [mikenye/docker-steam](https://github
 -> Set max resolution to 720p.  
 -> Set max upload speed to 10Mbit/s.  
 
-## Running
+### Running
 
 So far, I've been testing this on my humble homelab machine.  
 (HP Prodesk 600 G1 DM - i3-4150T - 4GB DDR3L - 240GB SATA SSD).  
@@ -72,12 +72,12 @@ You can then browse to http://[SERVERIP]:15800/, log in as yourself, set up remo
 You may need to run `modprobe uinput` on the docker host prior... See how you go.  
 
 
-## Know Issues
+### Know Issues
 
 - On subsequent runs, a segmentation fault occurs. Deleting the `steam` volume and having Steam re-install seems to fix it up. It's annoying but I haven't figured out a fix yet.
 
 
-## Games tested.
+### Games tested.
 
 * [PixelJunk Monsters via NoVNC](https://i.imgur.com/7FVqXm5.mp4)
 * Limbo [noVNC] (LOW FPS, 4~5fps)
