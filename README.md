@@ -7,6 +7,9 @@ This container builds upon the excellent work done in the [jlesage/baseimage-gui
 And is a fork of the original work done by [mikenye/docker-steam](https://github.com/mikenye/docker-steam)  
   
 ## PROJECT STATUS
+* Currently looking into Lutris (on Steam).
+* Maybe I'll change base image, build my own (for control, security, stability, updates, etc...).
+
 ### This is a work in progress.
 * Steam launches, and I can log in and install games.
 * Some games runs (native linux).
@@ -15,7 +18,7 @@ And is a fork of the original work done by [mikenye/docker-steam](https://github
 * No HW acceleration (low fps, high CPU usage).
 
 ### TO DO LIST:  
--> Working on gpu drivers (intel -> nvidia -> AMD)  
+-> Work on gpu drivers (INTEL)  
 -> Make VAAPI work!  
 -> Make touch controls/gamepads work!  
 -> Get audio working  
@@ -24,6 +27,8 @@ And is a fork of the original work done by [mikenye/docker-steam](https://github
 -> Maybe: Disable novnc entirely (security, nginx, etc...), replace with proper vnc (wich will be disabled after setting steam acc).  
 -> Set max resolution to 720p.  
 -> Set max upload speed to 10Mbit/s.  
+-> Work on gpu drivers (NVIDIA)  
+-> Work on gpu drivers (AMD)  
 
 ### Running
 
