@@ -7,7 +7,7 @@ This container builds upon the excellent work done in the [jlesage/baseimage-gui
 And is a fork of the original work done by [mikenye/docker-steam](https://github.com/mikenye/docker-steam)  
   
 ## PROJECT STATUS
-* ~Currently looking into Lutris (on Steam).~
+* Currently building a new base image.
 * Maybe I'll change base image, build my own (for control, security, stability, updates, etc...).
 
 ### This is a work in progress.
